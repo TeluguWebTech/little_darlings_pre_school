@@ -35,7 +35,7 @@ const App = () => {
 
   const handleScroll = () => {
     const scrollY = window.scrollY;
-    setShowScrollToTop(scrollY > 200); // Show button after scrolling down 200px
+    setShowScrollToTop(scrollY > 200); 
   };
 
   const scrollToTop = () => {
@@ -74,13 +74,21 @@ const App = () => {
       </div>
       <Footer />
       {showScrollToTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-5 right-5 bg-blue-500 text-white p-2 rounded-full shadow-md hover:bg-blue-600 focus:outline-none"
-        >
-          ↑
-        </button>
-      )}
+  <button
+    onClick={scrollToTop}
+    className="fixed bottom-5 right-5 bg-blue-500 text-white p-2 rounded-full shadow-md hover:bg-blue-600 focus:outline-none sm:bottom-10 sm:right-10 z-50"
+    style={{
+      width: "40px",
+      height: "40px",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+  >
+    ↑
+  </button>
+)}
+
     </div>
   );
 };
