@@ -5,21 +5,21 @@ const LevelsOfLearning = () => {
   const levels = [
     {
       id: 1,
-      title: "DAY CARE (18 MONTHS AND ABOVE)",
+      title: "DAY CARE (12 MONTHS AND ABOVE)",
       description:
         "Mother's Pride Day Care offers a nurturing and stimulating child day care program with a team of dedicated care givers.",
       image: "learn/lev-1.jpg",
     },
     {
       id: 2,
-      title: "PLAY GROUP (2 YEARS AND ABOVE)",
+      title: "PLAY GROUP (1 YEARS AND ABOVE)",
       description:
         "At the age of two, children begin to develop independence. It is the best time to explore their developmental milestones.",
         image: "learn/lev-2.jpg",
     },
     {
       id: 3,
-      title: "NURSERY (3 YEARS AND ABOVE)",
+      title: "AFTER SCHOOL",
       description:
         "Nursery programs focus on fostering social skills, creativity, and confidence, helping children to prepare for primary school.",
         image: "learn/lev-3.jpg",
@@ -58,13 +58,13 @@ const LevelsOfLearning = () => {
                 {level.title}
               </h3>
               <p className="text-gray-600 mb-4">{level.description}</p>
-              <motion.button
+              {/* <motion.button
                 className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
                 Know More
-              </motion.button>
+              </motion.button> */}
             </div>
           </motion.div>
         ))}
