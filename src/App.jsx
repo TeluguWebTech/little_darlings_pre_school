@@ -52,10 +52,10 @@ const App = () => {
   return (
     <div>
       <Topbar scrollToSection={scrollToSection} />
-      <div ref={sliderRef}>
+      <div ref={sliderRef} >
         <Slider />
       </div>
-      <div ref={aboutRef}>
+      <div ref={aboutRef} style={{marginTop:"-80px"}}>
         <Banner />
       </div>
       {/* <AnimatedIcons /> */}
