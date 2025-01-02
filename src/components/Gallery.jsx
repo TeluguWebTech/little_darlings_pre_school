@@ -26,7 +26,7 @@ const LevelsOfLearning = () => {
     },
     {
       id: 4,
-      title: "KINDERGARTEN (4 YEARS AND ABOVE)",
+      title: "TUTION POINT",
       description:
         "Kindergarten is the time to strengthen foundational skills and build curiosity for learning in a structured environment.",
         image: "learn/lev-4.jpg",
