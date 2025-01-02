@@ -10,20 +10,14 @@ import {
 const items = [
   {
     src: 'slider/c-1.png',
-    // altText: 'Slide 1',
-    // caption: 'Slide 1',
     key: 1,
   },
   {
     src: 'slider/c-2.png',
-    // altText: 'Slide 2',
-    // caption: 'Slide 2',
     key: 2,
   },
   {
     src: 'slider/c-3.png',
-    // altText: 'Slide 3',
-    // caption: 'Slide 3',
     key: 3,
   },
 ];
@@ -56,7 +50,7 @@ function Slider(args) {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} />
+        <img src={item.src} alt={`Slide ${item.key}`} />
         <CarouselCaption
           captionText={item.caption}
           captionHeader={item.caption}
@@ -66,31 +60,33 @@ function Slider(args) {
   });
 
   return (
- <div className="sliderSection">
-       <Carousel
-      activeIndex={activeIndex}
-      next={next}
-      previous={previous}
-      {...args}
-    >
-      <CarouselIndicators
-        items={items}
+    <div className="sliderSection">
+      <Carousel
         activeIndex={activeIndex}
-        onClickHandler={goToIndex}
-      />
-      {slides}
-      <CarouselControl
-        direction="prev"
-        directionText="Previous"
-        onClickHandler={previous}
-      />
-      <CarouselControl
-        direction="next"
-        directionText="Next"
-        onClickHandler={next}
-      />
-    </Carousel>
- </div>
+        next={next}
+        previous={previous}
+        {...args}
+        interval={2000}  
+        ride="carousel"  
+      >
+        <CarouselIndicators
+          items={items}
+          activeIndex={activeIndex}
+          onClickHandler={goToIndex}
+        />
+        {slides}
+        <CarouselControl
+          direction="prev"
+          directionText="Previous"
+          onClickHandler={previous}
+        />
+        <CarouselControl
+          direction="next"
+          directionText="Next"
+          onClickHandler={next}
+        />
+      </Carousel>
+    </div>
   );
 }
 
